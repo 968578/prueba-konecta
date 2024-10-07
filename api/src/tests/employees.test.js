@@ -3,7 +3,7 @@ require("dotenv").config();
 const app = require("../index");
 const request = require("supertest");
 
-const { Employee, Request } = require("../sequelize/models/index-2");
+const { Employee, Request } = require("../sequelize/models/index");
 
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
