@@ -1,0 +1,12 @@
+FROM node:22.7.0
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm i -E
+RUN npm install -g sequelize-cli
+
+COPY . .
+
+CMD ["npm", "run", "serve"]
