@@ -10,7 +10,7 @@ const password = "contraseña-usuario";
 */
 
 const name = "super-admin";
-const password = "123tomate";
+const password = "omar1234";
 
 module.exports= {
   name,

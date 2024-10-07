@@ -29,8 +29,6 @@ services:
     networks:
       - red1
     restart: always
-    environment: 
-      DB_HOST: 172.18.0.2
     depends_on:
       - db
     ports:
