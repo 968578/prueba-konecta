@@ -54,11 +54,6 @@ router.put("/close/:id", verifyToken, verifyEmployee, async (req, res) => {
 
     const request = await Request.findByPk(id);
 
-    // si el que intenta editar no es el dueño del pedido, no lo va a dejar
-    if (employeeId != request.employee_id) {
-      throw new AppError(errorStatusCodesMap.unauthorized, errorResponsesMap.unauthorized)
-    }
-
     request.done = true;
     await request.save();
 
